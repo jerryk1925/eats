@@ -1,8 +1,29 @@
 <template>
-  <div id="app">
-    <router-view />
-  </div>
+  <Context id="app">
+    <component :is="layout">
+      <router-view />
+    </component>
+  </Context>
 </template>
+
+<script>
+import Context from '@/context';
+
+export default {
+  name: 'App',
+  computed: {
+    layout() {
+      return this.$route.meta.layout;
+    }
+  },
+  mounted() {
+    console.log(this.$route.meta);
+  },
+  components: {
+    Context
+  }
+};
+</script>
 
 <style>
 #app {
