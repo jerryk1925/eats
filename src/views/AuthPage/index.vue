@@ -22,31 +22,22 @@
 </template>
 
 <script>
-import { ref } from '@vue/composition-api';
-import { password as confirmPassword, name as confirmName } from '@/config';
-import { useStore } from '@/hooks/useStore';
-import { useRouter } from '@/hooks/useRouter';
+// import { password as confirmPassword, name as confirmName } from '@/config';
 import Input from '@/components/UI/Input';
 import Button from '@/components/UI/Button';
 export default {
   name: 'AuthPage',
-  setup() {
-    const store = useStore();
-    const { route, router } = useRouter();
-    console.log(route, router, store);
-    const name = ref('');
-    const password = ref('');
-    const submit = e => {
-      e.preventDefault();
-      if (name.value === confirmName && password.value === confirmPassword) {
-        console.log('qweqwe');
-      }
-    };
+  data() {
     return {
-      name,
-      password,
-      submit
+      name: '',
+      password: ''
     };
+  },
+  methods: {
+    submit(e) {
+      e.preventDefault();
+      this.$router.push('/');
+    }
   },
   components: {
     'ui-input': Input,

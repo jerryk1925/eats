@@ -1,14 +1,12 @@
 <template>
-  <Context id="app">
+  <main id="app">
     <component :is="layout">
       <router-view />
     </component>
-  </Context>
+  </main>
 </template>
 
 <script>
-import Context from '@/context';
-
 export default {
   name: 'App',
   computed: {
@@ -19,9 +17,6 @@ export default {
   mounted() {
     console.log(this.$route.meta);
   },
-  components: {
-    Context
-  }
 };
 </script>
 
