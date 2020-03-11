@@ -1,7 +1,9 @@
 <template>
   <main>
     <Sidebar />
-    <slot />
+    <div>
+      <slot />
+    </div>
   </main>
 </template>
 
@@ -14,3 +16,9 @@ export default {
   }
 };
 </script>
+
+<style module>
+.wrapper{
+
+}
+</style>

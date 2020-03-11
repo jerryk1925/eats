@@ -1,9 +1,7 @@
 <template>
-  <main id="app">
-    <component :is="layout">
-      <router-view />
-    </component>
-  </main>
+  <component :is="layout" id="app">
+    <router-view />
+  </component>
 </template>
 
 <script>

@@ -29,11 +29,12 @@ export default {
   background: white;
   transition: 0.2s;
 
-  &:hover {
+  &:hover, &:focus {
     background: var(--root-color-blue);
   }
 
-  &:hover .text {
+  &:hover .text,
+  &:focus  .text{
     color: white;
   }
 }

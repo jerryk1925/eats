@@ -1,0 +1,30 @@
+.wrapper {
+    background: var(--root-color-light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    width: 480px;
+    background: white;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.title {
+    text-align: center;
+    font-size: 26px;
+    color: var(--root-color-black);
+    margin: 0;
+}
+
+.marginTop {
+    margin-top: 20px;
+    width: 100%;
+}

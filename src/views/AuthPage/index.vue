@@ -1,11 +1,11 @@
 <template>
-  <div :class="$style.wrapper">
-    <form :class="$style.form" @submit="submit">
-      <h1 :class="$style.title">Вперед</h1>
-      <div :class="$style.marginTop">
+  <div :class="css.wrapper">
+    <form :class="css.form" @submit="submit">
+      <h1 :class="css.title">Вперед</h1>
+      <div :class="css.marginTop">
         <ui-input v-model="name" id="name" name="name" placeholder="Имя" />
       </div>
-      <div :class="$style.marginTop">
+      <div :class="css.marginTop">
         <ui-input
           v-model="password"
           id="password"
@@ -14,7 +14,7 @@
           placeholder="Пароль"
         />
       </div>
-      <div :class="$style.marginTop">
+      <div :class="css.marginTop">
         <ui-button type="submit">Ввойти</ui-button>
       </div>
     </form>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-// import { password as confirmPassword, name as confirmName } from '@/config';
+import css from './AuthPage.css'
 import Input from '@/components/UI/Input';
 import Button from '@/components/UI/Button';
 export default {
@@ -30,7 +30,8 @@ export default {
   data() {
     return {
       name: '',
-      password: ''
+      password: '',
+      css
     };
   },
   methods: {
