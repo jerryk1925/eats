@@ -1,11 +1,13 @@
 <template>
-  <aside :class="$style.wrapper">
+  <aside :class="css.wrapper">
     <ul>
       <li>
-        1
+        <router-link to="/main">
+          <Gear />
+        </router-link>
       </li>
       <li>
-        1
+        <Info />
       </li>
     </ul>
     <div>
@@ -15,16 +17,21 @@
 </template>
 
 <script>
+import Gear from '@/assets/svg/gear.svg';
+import Info from '@/assets/svg/info.svg';
+import css from './Sidebar.css';
 export default {
-  name: 'Sidebar'
+  name: 'Sidebar',
+  data() {
+    return {
+      css
+    };
+  },
+  components: {
+    Gear,
+    Info
+  }
 };
 </script>
 
-<style module>
-.wrapper{
-  position: fixed;
-  height: 100vh;
-  background: var(--root-color-blue);
-  width: 160px;
-}
-</style>
+<style module></style>

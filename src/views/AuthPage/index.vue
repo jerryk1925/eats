@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import css from './AuthPage.css'
+import css from './AuthPage.css';
 import Input from '@/components/UI/Input';
 import Button from '@/components/UI/Button';
 export default {
@@ -37,7 +37,7 @@ export default {
   methods: {
     submit(e) {
       e.preventDefault();
-      this.$router.push('/');
+      this.$router.push('/main');
     }
   },
   components: {

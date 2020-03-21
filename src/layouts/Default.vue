@@ -1,7 +1,8 @@
 <template>
   <main>
     <Sidebar />
-    <div>
+    <div :class="css.main">
+      <div>asd</div>
       <slot />
     </div>
   </main>
@@ -9,8 +10,14 @@
 
 <script>
 import Sidebar from '@/components/Sidebar';
+import css from './Layout.css'
 export default {
   name: 'Default',
+  data () {
+    return {
+      css
+    }
+  },
   components: {
     Sidebar
   }

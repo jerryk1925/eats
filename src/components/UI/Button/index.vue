@@ -1,5 +1,11 @@
 <template>
-  <button :class="$style.wrapper" :type="type" v-on="$listeners">
+  <button
+    ref="button"
+    :class="$style.wrapper"
+    :type="type"
+    @click.passive="click"
+    :disabled="disabled"
+  >
     <div :class="$style.text">
       <slot />
     </div>
@@ -13,6 +19,16 @@ export default {
     type: {
       default: 'button',
       type: String
+    },
+    disabled: {
+      default: false,
+      type: Boolean
+    }
+  },
+  methods: {
+    click() {
+      this.$emit('click');
+      this.$refs.button.blur();
     }
   }
 };
@@ -29,12 +45,13 @@ export default {
   background: white;
   transition: 0.2s;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: var(--root-color-blue);
   }
 
   &:hover .text,
-  &:focus  .text{
+  &:focus .text {
     color: white;
   }
 }

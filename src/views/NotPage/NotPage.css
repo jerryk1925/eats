@@ -1,0 +1,25 @@
+.wrapper{
+    background: var(--root-color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title{
+    color: var(--root-color-white);
+    font-size: 120px;
+    letter-spacing: 1.2;
+
+}
+
+.description{
+    margin-top: 20px;
+    font-size: 36px;
+    color: var(--root-color-white);
+}
+
+.through{
+    text-decoration: line-through;
+}

@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    meta: { layout: DefaultLayout },
+    meta: { layout: NoSidebarLayout },
     component: () => import(/* webpackChunkName: "home" */ '../views/HomePage')
   },
   {
@@ -19,6 +19,18 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "auth" */ '../views/AuthPage')
+  },
+  {
+    path: '/main',
+    name: 'MainPage',
+    meta: { layout: DefaultLayout },
+    component: () => import(/* webpackChunkName: "auth" */ '../views/MainPage')
+  },
+  {
+    path: '*',
+    name: 'NotPage',
+    meta: { layout: NoSidebarLayout },
+    component: () => import(/* webpackChunkName: "auth" */ '../views/NotPage')
   }
 ];
 

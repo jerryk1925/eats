@@ -14,7 +14,7 @@ export default {
   },
   mounted() {
     console.log(this.$route.meta);
-  },
+  }
 };
 </script>
 
@@ -25,5 +25,11 @@ export default {
 }
 * {
   box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 </style>

@@ -1,0 +1,15 @@
+.wrapper {
+    background: var(--root-color-blue);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}

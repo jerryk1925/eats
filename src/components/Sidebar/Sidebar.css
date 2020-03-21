@@ -1,0 +1,10 @@
+.wrapper{
+    position: fixed;
+    height: 100vh;
+    background: var(--root-color-blue);
+    width: var(--root-width-sidebar);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
