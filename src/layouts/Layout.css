@@ -1,4 +1,6 @@
 .main{
     margin-left: var(--root-width-sidebar);
     padding: 20px;
+    background: var(--root-color-white);
+    min-height: 100vh;
 }

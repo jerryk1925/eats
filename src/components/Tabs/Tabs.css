@@ -1,0 +1,27 @@
+.list{
+    margin: var(--root-xl) 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.item{
+    color: var(--root-color-light-grey);
+    font-weight: 500;
+    cursor: pointer;
+
+    & + .item{
+          margin-left: var(--root-xl);
+    }
+
+    &:hover{
+         color: var(--root-color-purple);
+    }
+}
+/*.item + .item {*/
+/*    */
+/*}*/
+
+.active{
+    color: var(--root-color-purple);
+}

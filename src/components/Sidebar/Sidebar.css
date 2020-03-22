@@ -1,10 +1,22 @@
 .wrapper{
     position: fixed;
     height: 100vh;
-    background: var(--root-color-blue);
+    background: var(--root-color-purple);
     width: var(--root-width-sidebar);
-    padding: 20px;
+    padding: var(--root-xl);
     display: flex;
     flex-direction: column;
     align-items: center
+}
+
+.link{
+    margin-bottom: var(--root-l);
+}
+
+.exit{
+    position: absolute;
+    bottom: var(--root-xl);
+    color: var(--root-color-light-blue);
+    font-weight: 500;
+    cursor: pointer;
 }

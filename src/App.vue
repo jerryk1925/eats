@@ -20,8 +20,10 @@ export default {
 
 <style>
 #app {
+  /*font-family: 'San Francisco';*/
   font-family: system-ui;
   box-sizing: border-box;
+  font-size: var(--root-font-size-small);
 }
 * {
   box-sizing: border-box;

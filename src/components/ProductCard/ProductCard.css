@@ -1,0 +1,56 @@
+.wrapper{
+    padding: var(--root-xl) var(--root-m);
+    border: 2px solid white;
+    border-radius: var(--root-m);
+    box-shadow: 0 4px 10px 2px var(--root-color-shadow-purple);
+    margin-bottom: var(--root-xl);
+}
+
+.name{
+    font-size: var(--root-font-size-large);
+    font-weight: 500;
+
+}
+
+.description{
+    margin: var(--root-m) 0;
+    color: var(--root-color-light-grey);
+}
+
+.title{
+    margin: var(--root-l) 0;
+    color: var(--root-color-light-grey);
+    font-size: var(--root-font-size-medium);
+}
+
+.nutritionalList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nutritionalItem{
+    text-align: center;
+    border: 2px solid white;
+    border-radius: var(--root-xl);
+    padding: var(--root-m) 0;
+    min-width: 110px;
+    box-shadow: 0 4px 10px 2px var(--root-color-shadow-purple);
+
+    & + .nutritionalItem{
+        margin-left: 20px;
+    }
+}
+
+.nutritionalCount{
+    font-weight: 500;
+    font-size: var(--root-font-size-medium);
+    margin-bottom: var(--root-m);
+}
+
+.nutritionalName{
+    margin-bottom: var(--root-s);
+}
+
+.nutritionalUnit{
+    color: var(--root-color-light-grey);
+}

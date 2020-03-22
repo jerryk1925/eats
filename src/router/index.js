@@ -1,18 +1,19 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { DefaultLayout, NoSidebarLayout } from '@/config';
+import { DefaultLayout, NoSidebarLayout } from '@/lib/config';
+import { mainPage, homePage, authPage, catalogPage } from '@/lib/routing';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: homePage(),
     name: 'Home',
     meta: { layout: NoSidebarLayout },
     component: () => import(/* webpackChunkName: "home" */ '../views/HomePage')
   },
   {
-    path: '/auth',
+    path: authPage(),
     name: 'Auth',
     meta: { layout: NoSidebarLayout },
     // route level code-splitting
@@ -21,16 +22,23 @@ const routes = [
     component: () => import(/* webpackChunkName: "auth" */ '../views/AuthPage')
   },
   {
-    path: '/main',
+    path: mainPage(),
     name: 'MainPage',
     meta: { layout: DefaultLayout },
-    component: () => import(/* webpackChunkName: "auth" */ '../views/MainPage')
+    component: () => import(/* webpackChunkName: "main" */ '../views/MainPage')
+  },
+  {
+    path: catalogPage(),
+    name: 'CatalogPage',
+    meta: { layout: DefaultLayout },
+    component: () =>
+      import(/* webpackChunkName: "catalog" */ '../views/CatalogPage')
   },
   {
     path: '*',
     name: 'NotPage',
     meta: { layout: NoSidebarLayout },
-    component: () => import(/* webpackChunkName: "auth" */ '../views/NotPage')
+    component: () => import(/* webpackChunkName: "404" */ '../views/NotPage')
   }
 ];
 

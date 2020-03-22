@@ -2,7 +2,6 @@
   <main>
     <Sidebar />
     <div :class="css.main">
-      <div>asd</div>
       <slot />
     </div>
   </main>
@@ -10,13 +9,13 @@
 
 <script>
 import Sidebar from '@/components/Sidebar';
-import css from './Layout.css'
+import css from './Layout.css';
 export default {
   name: 'Default',
-  data () {
+  data() {
     return {
       css
-    }
+    };
   },
   components: {
     Sidebar
@@ -25,7 +24,6 @@ export default {
 </script>
 
 <style module>
-.wrapper{
-
+.wrapper {
 }
 </style>

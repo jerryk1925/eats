@@ -1,35 +1,33 @@
 <template>
   <aside :class="css.wrapper">
     <ul>
-      <li>
-        <router-link to="/main">
-          <Gear />
-        </router-link>
-      </li>
-      <li>
-        <Info />
+      <li :class="css.link" v-for="link in links" :key="link.url.toString()">
+        <ButtonLink :url="link.url">
+          <component :is="link.svg" />
+        </ButtonLink>
       </li>
     </ul>
-    <div>
+    <div :class="css.exit">
       Выход
     </div>
   </aside>
 </template>
 
 <script>
-import Gear from '@/assets/svg/gear.svg';
-import Info from '@/assets/svg/info.svg';
+import ButtonLink from '@/components/UI/ButtonLink';
 import css from './Sidebar.css';
+import { SIDEBAR_LINKS } from './utils';
+
 export default {
   name: 'Sidebar',
   data() {
     return {
-      css
+      css,
+      links: SIDEBAR_LINKS
     };
   },
   components: {
-    Gear,
-    Info
+    ButtonLink
   }
 };
 </script>
