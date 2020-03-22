@@ -2,14 +2,13 @@ const postcssPresetEnv = require('postcss-preset-env');
 const postcssVarsConfig = require('./postcss.vars.js');
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ? '/eats/' : '/',
   chainWebpack: config => {
-    const svgRule = config.module.rule('svg')
+    const svgRule = config.module.rule('svg');
 
-    svgRule.uses.clear()
+    svgRule.uses.clear();
 
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader');
   },
   css: {
     requireModuleExtension: false,
